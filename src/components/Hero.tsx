@@ -1,0 +1,56 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Hero() {
+  return (
+    <section className="relative">
+      <div className="relative h-[560px] md:h-[640px] w-full overflow-hidden">
+        <Image
+          src="/images/hero-fleet.jpg"
+          alt="Flota de camiones y furgones CAM Logistic"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(23,51,94,0.15) 0%, rgba(23,51,94,0.35) 55%, rgba(23,51,94,0.92) 100%)",
+          }}
+        />
+
+        <div className="relative h-full mx-auto max-w-7xl px-6 lg:px-8 flex flex-col justify-end pb-14 md:pb-16">
+          <div className="fade-up max-w-2xl">
+            <div className="eyebrow text-sm uppercase tracking-wide text-[var(--color-gold)] mb-4">
+              Logística B2B · Primera y última milla
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.2rem] font-bold tracking-tight leading-[1.05] text-white">
+              Tu operación logística, bajo control.
+            </h1>
+            <p className="mt-5 text-lg leading-relaxed text-white/85 max-w-xl">
+              Diseñamos y ejecutamos operaciones de transporte dedicadas para
+              retail, industria, courier y consumo masivo, combinando
+              personas, procesos y tecnología.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link
+                href="/contacto"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] text-[var(--color-blue-deep)] text-sm font-bold px-7 py-3.5 hover:bg-[var(--color-gold-soft)] transition-colors"
+              >
+                Solicitar propuesta
+              </Link>
+              <Link
+                href="/servicios"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 text-white text-sm font-semibold px-7 py-3.5 hover:bg-white/10 transition-colors"
+              >
+                Ver servicios
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

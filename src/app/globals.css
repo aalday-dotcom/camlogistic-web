@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --color-blue-deep: #17335e;
+  --color-blue: #2e5da4;
+  --color-blue-light: #4e7fc0;
+  --color-blue-pale: #eaf0fa;
+  --color-gold: #f9b31e;
+  --color-gold-soft: #fcd98a;
+  --color-white: #ffffff;
+  --color-mist: #f4f6f9;
+  --color-mist-dark: #e4e9f0;
+  --color-ink: #16233a;
+  --color-muted: #5b6b7f;
+}
+
+@theme inline {
+  --color-blue-deep: var(--color-blue-deep);
+  --color-blue: var(--color-blue);
+  --color-blue-light: var(--color-blue-light);
+  --color-blue-pale: var(--color-blue-pale);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-mist: var(--color-mist);
+  --color-mist-dark: var(--color-mist-dark);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+
+  --font-display: var(--font-poppins);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jbmono);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+.eyebrow {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.25); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
