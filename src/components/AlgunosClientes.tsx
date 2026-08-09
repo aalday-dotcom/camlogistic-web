@@ -28,7 +28,7 @@ export default function AlgunosClientes() {
         <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4">
           {CLIENTS.map((c, i) => (
             <Reveal key={c.name} delay={(i % 4) * 80}>
-              <div className="flex h-24 items-center justify-center rounded-xl border border-[var(--color-mist-dark)] bg-white p-4">
+              <div className="flex h-28 items-center justify-center rounded-xl border border-[var(--color-mist-dark)] bg-white p-2.5">
                 <div className="relative h-full w-full">
                   <Image
                     src={`/images/clients/${c.file}`}
