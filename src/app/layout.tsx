@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MariaChat from "@/components/MariaChat";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -96,6 +97,7 @@ export default function RootLayout({
         <Navbar />
         <main id="site-content">{children}</main>
         <Footer />
+        <MariaChat />
       </body>
     </html>
   );
