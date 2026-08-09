@@ -79,6 +79,20 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
+@keyframes hero-slide-fade {
+  0% { opacity: 0; }
+  4% { opacity: 1; }
+  30% { opacity: 1; }
+  36% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-slide {
+  animation: hero-slide-fade 18s ease-in-out infinite;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.55; transform: scale(1.25); }
