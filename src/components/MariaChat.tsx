@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const WHATSAPP_NUMBER = "56936616023";
 const VEHICLES = ["Furgón", "Camión", "Empresa de transporte (flota)"];
@@ -55,8 +56,14 @@ export default function MariaChat() {
       {open && (
         <div className="mb-4 w-[92vw] max-w-sm rounded-2xl bg-white shadow-2xl border border-[var(--color-mist-dark)] overflow-hidden">
           <div className="bg-[var(--color-blue-deep)] px-5 py-4 flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-gold)] text-[var(--color-blue-deep)] font-bold text-sm">
-              M
+            <div className="relative h-10 w-10 shrink-0 rounded-full overflow-hidden border-2 border-[var(--color-gold)]">
+              <Image
+                src="/images/maria-avatar.png"
+                alt="MarIA"
+                fill
+                className="object-cover"
+                sizes="40px"
+              />
             </div>
             <div className="flex-1">
               <div className="text-white text-sm font-bold">MarIA</div>
@@ -154,8 +161,16 @@ export default function MariaChat() {
             <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           </svg>
         ) : (
-          <span className="relative flex h-8 w-8 items-center justify-center rounded-full bg-[var(--color-gold)] text-[var(--color-blue-deep)] font-bold text-sm">
-            M
+          <span className="relative flex h-9 w-9 shrink-0">
+            <span className="relative h-9 w-9 rounded-full overflow-hidden border-2 border-[var(--color-gold)] block">
+              <Image
+                src="/images/maria-avatar.png"
+                alt="MarIA"
+                fill
+                className="object-cover"
+                sizes="36px"
+              />
+            </span>
             <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 border-2 border-[var(--color-blue-deep)]" />
           </span>
         )}
