@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SectionHeader from "@/components/SectionHeader";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
+import TransportistaForm from "@/components/TransportistaForm";
 
 export const metadata: Metadata = {
   title: "Transportistas",
@@ -116,84 +117,7 @@ export default function TransportistasPage() {
             />
           </Reveal>
           <Reveal delay={100}>
-            <form className="mt-10 grid sm:grid-cols-2 gap-5">
-              <div className="sm:col-span-1">
-                <label
-                  htmlFor="nombre"
-                  className="block text-sm font-medium text-[var(--color-blue-deep)] mb-1.5"
-                >
-                  Nombre completo
-                </label>
-                <input
-                  id="nombre"
-                  name="nombre"
-                  type="text"
-                  required
-                  className="w-full rounded-lg border border-[var(--color-mist-dark)] px-4 py-2.5 text-sm outline-none focus:border-[var(--color-blue)]"
-                />
-              </div>
-              <div className="sm:col-span-1">
-                <label
-                  htmlFor="telefono"
-                  className="block text-sm font-medium text-[var(--color-blue-deep)] mb-1.5"
-                >
-                  Teléfono
-                </label>
-                <input
-                  id="telefono"
-                  name="telefono"
-                  type="tel"
-                  required
-                  className="w-full rounded-lg border border-[var(--color-mist-dark)] px-4 py-2.5 text-sm outline-none focus:border-[var(--color-blue)]"
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="vehiculo"
-                  className="block text-sm font-medium text-[var(--color-blue-deep)] mb-1.5"
-                >
-                  Tipo de vehículo
-                </label>
-                <select
-                  id="vehiculo"
-                  name="vehiculo"
-                  required
-                  className="w-full rounded-lg border border-[var(--color-mist-dark)] px-4 py-2.5 text-sm outline-none focus:border-[var(--color-blue)] bg-white"
-                >
-                  <option value="">Selecciona una opción</option>
-                  {VEHICLES.map((v) => (
-                    <option key={v} value={v}>
-                      {v}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="comuna"
-                  className="block text-sm font-medium text-[var(--color-blue-deep)] mb-1.5"
-                >
-                  Comuna
-                </label>
-                <input
-                  id="comuna"
-                  name="comuna"
-                  type="text"
-                  className="w-full rounded-lg border border-[var(--color-mist-dark)] px-4 py-2.5 text-sm outline-none focus:border-[var(--color-blue)]"
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center rounded-full bg-[var(--color-blue-deep)] text-white text-sm font-semibold px-7 py-3.5 hover:bg-[var(--color-blue)] transition-colors"
-                >
-                  Postular como transportista
-                </button>
-                <p className="mt-3 text-xs text-center text-[var(--color-muted)]">
-                  Este formulario se conectará próximamente a CAM HUB.
-                </p>
-              </div>
-            </form>
+            <TransportistaForm />
           </Reveal>
         </div>
       </section>
