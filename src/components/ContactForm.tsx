@@ -35,6 +35,8 @@ const inputClass =
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (submitted) {
     return (
@@ -49,12 +51,41 @@ export default function ContactForm() {
     );
   }
 
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(null);
+    setSending(true);
+
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "No se pudo enviar la solicitud.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "No se pudo enviar la solicitud. Intenta nuevamente."
+      );
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
+      onSubmit={handleSubmit}
       className="grid sm:grid-cols-2 gap-5 rounded-2xl border border-[var(--color-mist-dark)] p-7 sm:p-8"
     >
       <Field label="Nombre">
@@ -115,11 +146,17 @@ export default function ContactForm() {
       </Field>
 
       <div className="sm:col-span-2">
+        {error && (
+          <p className="mb-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-2.5">
+            {error}
+          </p>
+        )}
         <button
           type="submit"
-          className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[var(--color-blue-deep)] text-white text-sm font-semibold px-8 py-3.5 hover:bg-[var(--color-blue)] transition-colors"
+          disabled={sending}
+          className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[var(--color-blue-deep)] text-white text-sm font-semibold px-8 py-3.5 hover:bg-[var(--color-blue)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          Solicitar propuesta
+          {sending ? "Enviando…" : "Solicitar propuesta"}
         </button>
       </div>
     </form>
