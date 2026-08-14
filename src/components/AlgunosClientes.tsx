@@ -20,7 +20,7 @@ export default function AlgunosClientes() {
         <Reveal>
           <SectionHeader
             eyebrow="Algunos clientes"
-            title="Algunos de los clientes que han operado con CAM Logistic."
+            title="Algunas de nuestras operaciones."
             align="center"
           />
         </Reveal>
@@ -50,3 +50,4 @@ export default function AlgunosClientes() {
     </section>
   );
 }
+
