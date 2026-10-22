@@ -156,8 +156,24 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-5 text-xs text-white/40">
-          © {year} CAM Logistic · Tecnología · Personas · Resultados
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-5 space-y-3 text-sm text-white/70">
+          <p>
+            <strong className="font-semibold text-white">
+              CAM Logistic es una marca de Santa Ines SpA.
+            </strong>{" "}
+            RUT: 77.157.099-2.
+          </p>
+          <p>
+            Dirección: Guardia Vieja 202, Of. 403, Providencia, Santiago de Chile.
+            {" "}Teléfono:{" "}
+            <a href="tel:+56992507629" className="hover:text-white transition-colors">
+              +56 9 9250 7629
+            </a>
+            .
+          </p>
+          <p className="text-xs text-white/40">
+            © {year} CAM Logistic · Tecnología · Personas · Resultados
+          </p>
         </div>
       </div>
     </footer>
