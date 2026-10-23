@@ -5,13 +5,6 @@ export default function TopBar() {
         <span>Guardia Vieja 202, Of. 403, Providencia · Santiago de Chile</span>
         <span>
           <a
-            href="mailto:ricardo.cotapos@camlogistic.cl"
-            className="hover:text-[var(--color-gold)] transition-colors"
-          >
-            ricardo.cotapos@camlogistic.cl
-          </a>
-          <span className="mx-2 text-white/30">·</span>
-          <a
             href="tel:+56951242195"
             className="hover:text-[var(--color-gold)] transition-colors"
           >

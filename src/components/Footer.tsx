@@ -142,11 +142,6 @@ export default function Footer() {
             <li>Guardia Vieja 202, Of. 403</li>
             <li>Providencia, Santiago</li>
             <li>
-              <a href="mailto:ricardo.cotapos@camlogistic.cl" className="hover:text-white transition-colors">
-                ricardo.cotapos@camlogistic.cl
-              </a>
-            </li>
-            <li>
               <a href="tel:+56951242195" className="hover:text-white transition-colors">
                 +56 9 5124 2195
               </a>

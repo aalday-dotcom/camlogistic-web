@@ -38,17 +38,6 @@ export default function ContactoPage() {
               </div>
               <div>
                 <div className="eyebrow text-xs uppercase tracking-wide text-[var(--color-muted)]">
-                  Correo
-                </div>
-                <a
-                  href="mailto:ricardo.cotapos@camlogistic.cl"
-                  className="mt-1 block font-semibold text-[var(--color-blue-deep)] hover:text-[var(--color-blue)]"
-                >
-                  ricardo.cotapos@camlogistic.cl
-                </a>
-              </div>
-              <div>
-                <div className="eyebrow text-xs uppercase tracking-wide text-[var(--color-muted)]">
                   Teléfono
                 </div>
                 <a

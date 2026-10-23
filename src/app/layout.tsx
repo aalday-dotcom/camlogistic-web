@@ -79,7 +79,6 @@ export default function RootLayout({
               "@type": "Organization",
               name: "CAM Logistic",
               url: "https://camlogistic.cl",
-              email: "ricardo.cotapos@camlogistic.cl",
               telephone: "+56951242195",
               address: {
                 "@type": "PostalAddress",
