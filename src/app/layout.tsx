@@ -80,7 +80,7 @@ export default function RootLayout({
               name: "CAM Logistic",
               url: "https://camlogistic.cl",
               email: "ricardo.cotapos@camlogistic.cl",
-              telephone: "+56992507629",
+              telephone: "+56951242195",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Guardia Vieja 202, Of. 403",

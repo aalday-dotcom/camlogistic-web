@@ -12,10 +12,10 @@ export default function TopBar() {
           </a>
           <span className="mx-2 text-white/30">·</span>
           <a
-            href="tel:+56992507629"
+            href="tel:+56951242195"
             className="hover:text-[var(--color-gold)] transition-colors"
           >
-            +56 9 9250 7629
+            +56 9 5124 2195
           </a>
         </span>
       </div>

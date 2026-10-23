@@ -52,10 +52,10 @@ export default function ContactoPage() {
                   Teléfono
                 </div>
                 <a
-                  href="tel:+56992507629"
+                  href="tel:+56951242195"
                   className="mt-1 block font-semibold text-[var(--color-blue-deep)] hover:text-[var(--color-blue)]"
                 >
-                  +56 9 9250 7629
+                  +56 9 5124 2195
                 </a>
               </div>
               <div>

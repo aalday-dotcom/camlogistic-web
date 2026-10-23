@@ -147,8 +147,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="tel:+56992507629" className="hover:text-white transition-colors">
-                +56 9 9250 7629
+              <a href="tel:+56951242195" className="hover:text-white transition-colors">
+                +56 9 5124 2195
               </a>
             </li>
           </ul>
@@ -166,8 +166,8 @@ export default function Footer() {
           <p>
             Dirección: Guardia Vieja 202, Of. 403, Providencia, Santiago de Chile.
             {" "}Teléfono:{" "}
-            <a href="tel:+56992507629" className="hover:text-white transition-colors">
-              +56 9 9250 7629
+            <a href="tel:+56951242195" className="hover:text-white transition-colors">
+              +56 9 5124 2195
             </a>
             .
           </p>
